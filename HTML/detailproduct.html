@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTShop - ProductDetail</title>
+    <!-- Link Bootstrap -->
+    <link rel="stylesheet" href="../Bootstrap/bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <!-- Link Icon -->
+    <link rel="stylesheet" href="../Icon/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="../Icon/themify-icons/themify-icons.css">
+    <!-- Link Font -->
+    <link rel="stylesheet" href="../Font/Roboto/LICENSE.txt">
+    <!-- Link Jquery -->
+    <script src="../JQuery/jquery-3.6.0.min.js"></script>
+    <script src="../JQuery/popper.min.js"></script>
+    <!-- <script src="../Boostrap/bootstrap-4.6.1-dist/js/bootstrap.bundle.min.js"></script> -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="../IMG/favicon.png"/>
+    <!-- Link JS -->
+    <script src="../JavaScript/product.js"></script>
+    <script>
+        $(document).ready(function (){
+            $("#masp").html(localStorage.getItem("ma"));
+            $("#tenSp").html(localStorage.getItem("ten"));
+            $("#hinhanh").attr("src", localStorage.getItem("hinhanh"));
+            $("#theloai").html(localStorage.getItem("theloai"));
+            $("#gia").html(localStorage.getItem("gia"));
+            $("#ten2").html(localStorage.getItem("ten2"));
+            $("#chitiet").html(localStorage.getItem("chitiet"));
+        });
+
+
+            // $("#btnmua").click(function(){
+
+            // let src = localStorage.getItem("hinhanh")
+            // let ten = localStorage.getItem("ten")
+            // let gia = localStorage.getItem("gia")
+
+            // let list = "<li class='header__cart-item'>"+
+            //                         "<img src="+src+" alt='' class='header__cart-img'>"+
+            //                         "<div class='header__cart-item-info'>"+
+            //                             "<div class='header__cart-item-head'>"+
+            //                                 "<h5 class='header__cart-item-name'>"+ten+"</h5>"+
+            //                                 "<div class='header__cart-item-price-wrap'>"+
+            //                                     "<span class='header__cart-item-price'>"+gia+"</span>"+
+            //                                     "<span class='header__cart-item-multiply'>x</span>"+
+            //                                     "<span class='header__cart-item-quantity'>1</span>"+
+            //                                 "</div>"+
+            //                             "</div>"+
+            //                             "<div class='header__cart-item-body'>"+
+            //                                 "<span class='header__cart-item-desciption'>"+
+            //                                     "Phân loại: Việt Nam"+
+            //                                 "</span>"+
+            //                                 "<span class='header__cart-item-remove'>Xóa</span>"+
+            //                             "</div>"+
+            //                         "</div>"+
+            //                     "</li>"+
+            //                     $(".mua").append(list);
+            // })
+    </script>
+
+</head>
+<body>
+    <div class="detail">
+        <div class="header-menu">
+            <header class="header">
+                <div class="n_gird">
+                    <div class="header-with-search">
+                        <div class="header__logo">
+                            <a href="" class="header__logo-link">
+                                <img class="header__logo-img" src="../IMG/logo-shop.png" alt="Logo">
+                            </a>
+                        </div>
+                        <div class="header__search">
+                            <div class="header__search-input-wrap">
+                                <input type="text"  class="header__search-input"  placeholder="Bố mẹ muốn tìm gì cho bé hôm nay?">
+                            </div>
+                            <button class="header__search-btn">
+                                <i class="header__search-btn-icon ti-search"></i>
+                            </button>
+                        </div>
+                        <div class="header__cart">
+                            <div class="header__cart-wrap">
+                                <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                                <span class="header__cart-notice">2</span>
+                                <!-- header__cart-list--nocart -->
+                                <div class="header__cart-list ">
+                                    <img class="header__cart-nocart-img" src="../IMG/no-cart.png" alt="Chưa có sản phẩm">
+                                    <!-- <span class="header__cart-nocart-mess">
+                                        Chưa có sản phẩm
+                                    </span> -->
+                                    <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                    <ul class="header__cart-list-item mua">
+                                        <!-- Cart Item -->
+                                        <li class="header__cart-item">
+                                            <img src="../IMG/ao-banchay-1.jpg" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Bộ tay phồng irish</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">160.000đ</span>
+                                                        <span class="header__cart-item-multiply">x</span>
+                                                        <span class="header__cart-item-quantity">1</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-desciption">
+                                                        Phân loại: Nữ
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="header__cart-item">
+                                            <img src="../IMG/ao-banchay-2.jpg" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Bộ thun bé trai chữ Missing</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">175.000đ</span>
+                                                        <span class="header__cart-item-multiply">x</span>
+                                                        <span class="header__cart-item-quantity">1</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-desciption">
+                                                        Phân loại: Nam
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xóa</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="menu">
+                <div class="n_gird">
+                    <ul class="menu__list">
+                        <li class="menu__list-item">
+                            <a href="../HTML/index.html" class="menu__list-item-link">TRANG CHỦ</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="../HTML/productgirl.html" class="menu__list-item-link">THỜI TRANG BÉ GÁI</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="../HTML/productboy.html" class="menu__list-item-link">THỜI TRANG BÉ TRAI</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="../HTML/productsale.html" class="menu__list-item-link">HÀNG SALE OFF</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="../HTML/address.html" class="menu__list-item-link">LIÊN HỆ</a>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="" class="menu__list-item-link">GIỚI THIỆU <i class="menu__list-item--icon fa-solid fa-sort-down"></i></a>
+                            <ul class="menu__list-lv2">
+                                <li class="menu__list-lv2--item">
+                                    <a href="../HTML/introduce.html" class="menu__list-lv2--link">Giới thiệu Web</a>
+                                </li>
+                                <li class="menu__list-lv2--item">
+                                    <a href="./member.html" class="menu__list-lv2--link">Giới thiệu thành viên</a>
+                                </li>
+                                <li class="menu__list-lv2--item">
+                                    <a href="./sitemap.html" class="menu__list-lv2--link">SiteMap</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu__list-item">
+                            <a href="" class="menu__list-item-link">TÀI KHOẢN <i class="menu__list-item--icon fa-solid fa-sort-down"></i></a>
+                            <ul class="menu__list-lv2">
+                                <li class="menu__list-lv2--item">
+                                    <a href="../HTML/login.html" class="menu__list-lv2--link pr-12">Đăng nhập</a>
+                                </li>
+                                <li class="menu__list-lv2--item">
+                                    <a href="../HTML/register.html" class="menu__list-lv2--link pr-12">Đăng ký</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="d_container">
+            <div class="n_gird">
+                <div class="n_gird__row">
+                    <div class="container__detail">
+                        <h2 class="">
+                            <a href="../HTML/index.html" class="container__map-link">
+                                Trang chủ
+                            </a>
+                            / Chi tiết sản phẩm
+                        </h2>
+                        <div class="container__detail-frames">
+                            <div class="n_gird__row">
+                                <div class="n_gird__column-30">
+                                    <img id="hinhanh" src="" alt="" class="container__detail-img" >
+                                </div>
+                                    <div class="n_gird__column-40">
+                                        <form action="" class="container__detail-form">
+                                            <p id="tenSp" class="container__detail-heading">
+                                                <!-- Bộ Cho Bé Trai Tay Ngắn Quần Lửng Túi Hộp Năng Động (6 - 14 tuổi) -->
+                                            </p>
+                                            <p id="theloai" class="container__detail-txt">
+                                                <!-- Bộ thun cho bé trai size đại từ 6 tuổi đến 14 tuổi form rộng thể thao năng động. -->
+                                            </p>
+                                            <hr>
+                                            <p id="gia" class="container__detail-price">
+                                                <!-- 158.000 đ -->
+                                            </p>
+                                            <label for="size" class="container__detail-size">
+                                                Chọn kích cỡ
+                                            </label>
+                                            <select name="" id="size">
+                                                <option value="20 - 23kg">20 - 23kg</option>
+                                                <option value="">23 - 26kg</option>
+                                                <option value="">26 - 30kg</option>
+                                                <option value="">30 - 35kg</option>
+                                                <option value="">35 - 40kg</option>
+                                                <option value="">40 - 42kg</option>
+                                            </select>
+                                            <label class="container__detail-color">
+                                                Chọn màu
+                                            </label>
+                                            <div class="group-radio" id="r">
+                                                <input type="radio" name="color" id="" checked>Xanh
+                                                <input type="radio" name="color" id="">Đỏ
+                                                <input type="radio" name="color" id="">Vàng
+                                            </div>
+                                            <br>
+                                            <label for="quantity">Số lượng :</label>
+                                            <select name="" id="quantity">
+                                                <option value="">1</option>
+                                                <option value="">2</option>
+                                                <option value="">3</option>
+                                                <option value="">4</option>
+                                                <option value="">5</option>
+                                                <option value="">6</option>
+                                            </select>
+                                            <br>
+                                            <button id="btnmua" class="container__detail-btn">Mua ngay</button>
+                                        </form>
+                                    </div>
+
+                                    <div class="n_gird__column-30">
+                                        <div class="container__detail-quanlity">
+                                            <p class="container__detail-quanlity-txt">
+                                                An tâm mua sắm tại NTShop
+                                            </p>
+                                            <ul class="container__detail-list">
+                                                <li class="container__detail-item">
+                                                    <i class="container__detail-icon fa-solid fa-square-caret-right"></i>
+                                                    Cam kết hàng Chất lượng Tốt
+                                                </li>
+                                                <li class="container__detail-item">
+                                                    <i class="container__detail-icon fa-solid fa-square-caret-right"></i>
+                                                    Đảm bảo Hàng như Hình
+                                                </li>
+                                                <li class="container__detail-item">
+                                                    <i class="container__detail-icon fa-solid fa-square-caret-right"></i>
+                                                    Không vừa được đổi size
+                                                </li>
+                                                <li class="container__detail-item">
+                                                    <i class="container__detail-icon fa-solid fa-square-caret-right"></i>
+                                                    Giao hàng Toàn quốc
+                                                </li>
+                                                <li class="container__detail-item">
+                                                    <i class="container__detail-icon fa-solid fa-square-caret-right"></i>
+                                                    Hàng đến tay mới trả tiền
+                                                </li>
+                                            </ul>
+                                            <img src="../IMG/logo-shop.png" alt="" class="container__detail-logo">
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="n_gird__row">
+                            <div class="detail__product">
+                                <p class="detail__product-heading">
+                                    Chi tiết sản phẩm
+                                </p>
+                                <div class="detail__product-content">
+                                    <p id="ten2" class="detail__product-content--heading">
+                                        <!-- Quần áo trẻ em size đại cho bé trai mặc mát ngày hè -->
+                                    </p>
+                                    <p id="chitiet" class="detail__product-content--txt">
+                                        <!-- Xu hướng chọn đồ hè cho bé đâu cần cầu kỳ mới đẹp Mẹ ha.
+                                        Một chiếc áo thun ngắn tay mix quần short lưng thun
+                                        form rộng thể thao cũng đủ tạo nên sức hút cá tính lắm rồi nè.
+                                        Mẫu gồm 3 màu: cam, đen, vàng đi size từ 20kg đến 52kg.
+                                        Bé mặc đi chơi, đi học, chơi thể thao thoải mái.
+                                        Với chất thun cotton thấm hút mồ hôi,
+                                        co giãn 4 chiều mặc thích bé ưng lắm luôn nha. -->
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="n_gird">
+                <div class="n_gird__row">
+                    <div class="n_gird__column-5">
+                        <div class="footer__contact">
+                            <img src="../IMG/logo-shop.png" alt="" class="footer__contact-img">
+                            <span class="footer__contact-address">
+                                <i class="footer__contact-icon fa-solid fa-location-dot"></i> 
+                                778/42/44D3 Thống Nhất, Phường 15, Quận Gò Vấp, Thành Phố Hồ Chí Minh 
+                            </span> <br>
+                            <span class="footer__contact-telephone">
+                                <i class="footer__contact-icon fa-solid fa-phone"></i> 
+                                0359594415
+                            </span> <br>
+                            <span class="footer__contact-email">
+                                <i class="footer__contact-icon fa-solid fa-envelope"></i> 
+                                NhanThinh@NTShop.vn
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="n_gird__column-5">
+                        <div class="footer__list">
+                            <span class="footer__list-heading">
+                                Danh mục sản phẩm
+                            </span>
+                            <ul class="footer__list-main">
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-link">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                        Tất cả sản phẩm
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-link">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                        Thời trang bé gái
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-link">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                        Thời trang bé trai
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-link">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                        Hàng Sale Off
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="n_gird__column-5">
+                        <div class="footer__opentime">
+                            <span class="footer__opentime-heading">
+                                Thời gian mở cửa
+                            </span>
+                            <ul class="footer__list-main">
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-link">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                        T2 - T7 : 9h00 - 22h00 <br>| CN : 9h00 - 17h00
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-link">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                        Xem bản đồ
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-link">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                        Tài khoản
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="n_gird__column-5">
+                        <div class="footer__opentime">
+                            <span class="footer__opentime-heading">
+                                Chính sách bán hàng
+                            </span>
+                            <ul class="footer__list-main">
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-link">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                        Giới thiệu
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-link">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                        Chính sách đổi trả
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-link">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                        Phương thức thanh toán
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-link">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                        Phương thức vận chuyển
+                                    </a>
+                                </li>
+                                <li class="footer__list-item">
+                                    <a href="" class="footer__list-link">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                        Chính sách bảo mật
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="n_gird__column-5">
+                        <div class="footer__certification">
+                            <span class="footer__certification-heading">
+                                Chứng nhận
+                            </span>
+                            <div class="testlogo">
+                                <a href="">NTSHOP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <p class="footer__copyright-text">&copy;2022 Bản quyền thuộc <a class="footer__copyright-link" href="">NTShop</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

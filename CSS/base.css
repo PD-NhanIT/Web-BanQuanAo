@@ -1,0 +1,108 @@
+/* Tạo biến */
+:root {
+    --while-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+    --primary-color:#2fd1e3;
+    --star-gold-color: #f3f32c;
+}
+
+.bd--pink {
+    border-bottom: 3px solid pink;
+}
+
+.color--pink {
+    background-color: pink;
+}
+
+.color--green {
+    background-color: green;
+}
+
+.bd--green {
+    border-bottom: 3px solid green;
+}
+
+.color--red {
+    background-color: red;
+}
+
+.bd--red {
+    border-bottom: 3px solid red;
+}
+.mg-3 {
+    margin: 3px;
+}
+.pr-12 {
+    padding-right: 12px !important;
+}
+
+* {
+    box-sizing: initial;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hack 1rem = 10px */
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.header-menu {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Tạo nền Reponsive */
+.n_gird {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.n_gird__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -6px;
+    margin-right: -6px;
+}
+
+.n_gird__column-5 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 19%
+}
+
+.n_gird__column-60 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 60%;
+}
+
+.n_gird__column-50 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: calc(50% - 24px)
+}
+
+.n_gird__column-40 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: calc(40% - 24px);
+}
+
+.n_gird__column-30 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: calc(30% - 24px);
+}
+
+.n_gird__column-20 {
+    padding-left: 6px;
+    padding-right: 6px;
+    width: calc(20% - 24px);
+}
